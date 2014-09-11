@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="dist/styles/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.css">
+</head>
+<body>
+  <header></header>
+  <div class="contain">
+    <div class="left">
+      <script type="text/template" id="template-user">
+        <img src="<%= image %>" class="user-img">
+        <h1><%= name %></h1>
+        <h2 class="user-name"><%= username %></h2>
+        <ul class="user-info">
+          <li><span class="octicon octicon-location"></span><%= location %></li>
+          <li><span class="octicon octicon-mail"></span><%= email %></li>
+          <li><span class="octicon octicon-clock"></span><%= joined %></li>
+        </ul>
+        <span>Follower<%= followers %></span>
+       
+        <span>Following<%= following %></span>
+        <h2 class="organizations">Organizations</h2>
+        <img src="<%= imgurl %>" class="org-img">
+      </script>
+    </div>
+    <div class="right">
+      <script type="text/template" id="template-repos">
+
+      </script>
+    </div>
+  </div>
+ 
+  
+
+
+
+
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

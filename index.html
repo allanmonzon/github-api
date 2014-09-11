@@ -48,13 +48,13 @@
           <span>Following<%= following %></span>
         </div>
         <h2 class="organizations">Organizations</h2>
-        <a href="<%= orgurl %>"><img src="<%= imgurl %>" class="org-img"></a>
+       
       </script>
     </div>
 
 
     <div class="right">
-          <div class="repo-nav"></div>
+      <div class="repo-nav"></div>
       <script type="text/template" id="template-repos">
     
 
@@ -65,10 +65,17 @@
         <div class="repo-list">
           <a href="<%= repo_url %>"><h2 class="repo-name"><%= repo_name %></h2></a>
           <span class="repo-update"><%= repo_update %></span>
-
+          <ul class="cool">
+            <li><%= repo_language %></li>
+            <li><span class="octicon octicon-star"></span><%= stargazers %></li>
+            <li><span class="octicon octicon-git-branch"></span><%= forks %></li>
+          </ul>
         </div>
        
       </script>
+
+  
+
     </div>
   </div>
 

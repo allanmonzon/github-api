@@ -1,6 +1,9 @@
 body {
   margin: 0; }
 
+a {
+  text-decoration: none; }
+
 ul {
   list-style: none; }
 
@@ -69,3 +72,23 @@ header {
 .right {
   display: inline-block;
   width: 730px; }
+
+.repo-nav {
+  height: 95px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e5e5e5; }
+
+.repo-list {
+  padding-bottom: 25px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #e5e5e5; }
+
+.repo-name {
+  color: #4183c4;
+  margin-bottom: 10px; }
+
+.repo-name:hover {
+  text-decoration: underline; }
+
+.repo-update {
+  font-size: 12px; }

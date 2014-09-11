@@ -3,6 +3,7 @@ var userData;
 var models = _.map(userData, function(item) {
 	return {
 			image: item.avatar_url,
+		 home_url: item.html_url,
 			 name: item.name,
 		 username: item.login,
 		 location: item.location,
@@ -24,3 +25,4 @@ _.each(models, function(model) {
 });
 
 var repoData;
+

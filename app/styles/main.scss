@@ -6,7 +6,9 @@ ul {
 	list-style: none;
 }
 
-
+li {
+	display: inline;
+}
 
 header {
 	max-width: 100%;
@@ -16,9 +18,24 @@ header {
 	border-bottom: 1px solid #e5e5e5;
 }
 
+.search-field {
+	width: 350px;
+	height: 20px;
+	margin-left: 5px;
+}
+
+.middle-head-nav {
+	display: inline-block;
+}
+
+.nav-img {
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+}
+
 .contain {
-	max-width: 982px;
-	height: 500px;
+	max-width: 982px;	
 	margin: 0 auto;
 }
 
@@ -41,15 +58,24 @@ header {
 }
 
 .user-info {
-	padding-bottom: 20px;
+	padding-bottom: 10px;
+	margin-left: -38px;
+}
+
+.user-info-nav{
+	display: inline-block;
+}
+
+.follow-section {
+	padding: 20px 0;
+	border-top: 1px solid #e5e5e5;
 	border-bottom: 1px solid #e5e5e5;
 }
 
 .organizations {
-	padding-top: 20px;
 	margin-top: 30px;
 	font-size: 18px;
-	border-top: 1px solid #e5e5e5;
+	
 }
 
 .org-img {

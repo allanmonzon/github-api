@@ -7,25 +7,52 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.css">
 </head>
 <body>
-  <header></header>
+
+  <header>
+    <div  class="contain">
+      
+      <span class="octicon octicon-mark-github"></span>
+      <input type="text" placeholder="Search GitHub" class="search-field"></input>
+      <ul class="middle-head-nav">
+        <li>Explore</li>
+        <li>Gist</li>
+        <li>Blog</li>
+        <li>Help</li>
+      </ul>
+
+      <a href="#"><img src="https://avatars.githubusercontent.com/u/5644576?v=2" class="nav-img"></a>
+      <ul class="middle-head-nav">
+        <li><span class="octicon octicon-plus"><span class="octicon octicon-triangle-down"></span></span></li>
+        <li><span class="octicon octicon-inbox"></span></li>
+        <li><span class="octicon octicon-gear"></span></li>
+        <li><span class="octicon octicon-sign-out"></span></li>
+      </ul>
+    
+    </div>
+
+  </header>
+
   <div class="contain">
     <div class="left">
       <script type="text/template" id="template-user">
-        <img src="<%= image %>" class="user-img">
+        <a href="<%= home_url %>"><img src="<%= image %>" class="user-img"></a>
         <h1><%= name %></h1>
         <h2 class="user-name"><%= username %></h2>
         <ul class="user-info">
-          <li><span class="octicon octicon-location"></span><%= location %></li>
-          <li><span class="octicon octicon-mail"></span><%= email %></li>
-          <li><span class="octicon octicon-clock"></span><%= joined %></li>
+          <li class="user-info-nav"><span class="octicon octicon-location"></span><%= location %></li>
+          <li class="user-info-nav"><span class="octicon octicon-mail"></span><%= email %></li>
+          <li class="user-info-nav"><span class="octicon octicon-clock"></span><%= joined %></li>
         </ul>
-        <span>Follower<%= followers %></span>
-       
-        <span>Following<%= following %></span>
+        <div class="follow-section">
+          <span>Follower<%= followers %></span>
+          <span>Following<%= following %></span>
+        </div>     
         <h2 class="organizations">Organizations</h2>
-        <img src="<%= imgurl %>" class="org-img">
+        <a href="<%= orgurl %>"><img src="<%= imgurl %>" class="org-img"></a>
       </script>
     </div>
+
+
     <div class="right">
       <script type="text/template" id="template-repos">
 

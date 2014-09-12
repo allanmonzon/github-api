@@ -1,5 +1,7 @@
 body {
-  margin: 0; }
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  font-size: 13px; }
 
 a {
   text-decoration: none; }
@@ -10,6 +12,10 @@ ul {
 li {
   display: inline; }
 
+.contain {
+  max-width: 982px;
+  margin: 0 auto; }
+
 header {
   max-width: 100%;
   height: 48px;
@@ -17,22 +23,67 @@ header {
   background: #f5f5f5;
   border-bottom: 1px solid #e5e5e5; }
 
-.search-field {
-  width: 350px;
-  height: 20px;
-  margin-left: 5px; }
+.octicon-mark-github {
+  margin-top: 5px;
+  margin-bottom: 6px;
+  color: #333;
+  font-size: 28px;
+  vertical-align: middle; }
 
-.middle-head-nav {
-  display: inline-block; }
+.octicon-mark-github:hover {
+  color: #4183c4; }
+
+.search-field {
+  width: 348px;
+  height: 24px;
+  padding-left: 9px;
+  margin-top: 10px;
+  margin-left: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px; }
+
+.head-nav {
+  display: inline-block;
+  font-family: Helvetica;
+  font-size: 13px;
+  font-weight: bold;
+  color: #333; }
+
+.head-nav-text {
+  color: #333;
+  margin-left: 12px; }
+
+.head-nav-text:hover {
+  color: #4183c4; }
+
+.head-mid-nav {
+  margin-left: -38px; }
+
+.head-right-nav {
+  margin-left: 104px; }
 
 .nav-img {
   width: 20px;
   height: 20px;
-  vertical-align: middle; }
+  vertical-align: middle;
+  border-radius: 3px; }
 
-.contain {
-  max-width: 982px;
-  margin: 0 auto; }
+.header-name {
+  display: inline-block;
+  margin-left: -5px;
+  margin-right: 10px;
+  color: #333; }
+
+.header-name:hover {
+  color: #4183c4; }
+
+.octicon-nav {
+  font-size: 18px; }
+
+.octicon-triangle-down {
+  font-size: 11px;
+  vertical-align: middle;
+  margin-bottom: 2px; }
 
 .left {
   vertical-align: top;
@@ -71,7 +122,7 @@ header {
 
 .right {
   display: inline-block;
-  width: 730px; }
+  width: 729px; }
 
 .repo-nav {
   height: 95px;
@@ -96,3 +147,38 @@ header {
 .cool {
   float: right;
   margin-bottom: 50px; }
+
+.footer {
+  padding-top: 28px;
+  margin-bottom: 30px;
+  border-top: 1px solid #e5e5e5;
+  font-size: 12px; }
+
+.footer-nav-text {
+  margin-right: 10px;
+  color: #4183c4; }
+
+.footer-nav-text:hover {
+  text-decoration: underline; }
+
+.footer-nav-left {
+  display: inline-block;
+  padding-left: 0;
+  margin-right: 74px; }
+
+.footer-nav-left > :first-child {
+  color: #777;
+  text-decoration: none; }
+
+.octicon-foot {
+  font-size: 24px;
+  color: #ccc;
+  margin-left: 74px; }
+
+.octicon-foot:hover {
+  color: #bbb; }
+
+.footer-nav-right {
+  display: inline-block;
+  float: right;
+  margin-right: -10px; }

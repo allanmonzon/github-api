@@ -3,34 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
-  <link rel="stylesheet" href="dist/styles/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.css">
+  <link rel="stylesheet" href="dist/styles/main.css">
 </head>
-<body>
 
+<body>
+           <!--/////////////////////// Header /////////////////////////-->
   <header>
     <div  class="contain">
 
-      <span class="octicon octicon-mark-github"></span>
+      <a href=""><span class="mega-octicon octicon-mark-github"></span></a>
       <input type="text" placeholder="Search GitHub" class="search-field"></input>
-      <ul class="middle-head-nav">
-        <li>Explore</li>
-        <li>Gist</li>
-        <li>Blog</li>
-        <li>Help</li>
+      <ul class="head-nav head-mid-nav">
+        <a href="https://github.com/explore"><li class="head-nav-text">Explore</li></a>
+        <a href="https://gist.github.com/"><li class="head-nav-text">Gist</li></a>
+        <a href="https://github.com/blog"><li class="head-nav-text">Blog</li></a>
+        <a href="https://help.github.com/"><li class="head-nav-text">Help</li></a> 
       </ul>
-
-      <a href="#"><img src="https://avatars.githubusercontent.com/u/5644576?v=2" class="nav-img"></a>
-      <ul class="middle-head-nav">
-        <li><span class="octicon octicon-plus"><span class="octicon octicon-triangle-down"></span></span></li>
-        <li><span class="octicon octicon-inbox"></span></li>
-        <li><span class="octicon octicon-gear"></span></li>
-        <li><span class="octicon octicon-sign-out"></span></li>
+    
+      <ul class="head-nav head-right-nav">
+        <li>
+          <a href="#" class="header-name"><img src="https://avatars.githubusercontent.com/u/5644576?v=2" class="nav-img">
+            <span class="">allanmonzon</span>
+          </a>
+        </li>
+        <a href=""><li class="head-nav-text"><span class="octicon octicon-plus octicon-nav"><span class="octicon octicon-triangle-down"></span></span></li></a>
+        <a href=""><li class="head-nav-text"><span class="octicon octicon-inbox octicon-nav"></span></li></a>
+        <a href=""><li class="head-nav-text"><span class="octicon octicon-gear octicon-nav"></span></li></a>
+        <a href=""><li class="head-nav-text"><span class="octicon octicon-sign-out octicon-nav"></span></li></a>
       </ul>
 
     </div>
-
   </header>
+
+           <!--/////////////////////// Body /////////////////////////-->
 
   <div class="contain">
     <div class="left">
@@ -73,13 +79,31 @@
         </div>
        
       </script>
-
-  
-
     </div>
   </div>
 
+           <!--/////////////////////// Footer /////////////////////////-->
 
+  <footer class="footer contain">
+    <ul class="footer-nav-left">
+      <li class="footer-nav-text">&copy; 2014 GitHub, Inc.</li>
+      <a href="https://help.github.com/articles/github-terms-of-service"><li class="footer-nav-text">Terms</li></a>
+      <a href="https://help.github.com/articles/github-privacy-policy"><li class="footer-nav-text">Privacy</li></a>
+      <a href="https://help.github.com/articles/github-security"><li class="footer-nav-text">Security</li></a>
+      <a href="https://github.com/contact"><li class="footer-nav-text">Contact</li></a>
+    </ul>
+    <a href="https://github.com/"><span class="octicon octicon-mark-github octicon-foot"></span></a>
+    <ul class="footer-nav-right">
+      <a href="https://status.github.com/"><li class="footer-nav-text">Status</li></a>
+      <a href="https://developer.github.com/"><li class="footer-nav-text">API</li></a>
+      <a href="https://training.github.com/"><li class="footer-nav-text">Training</li></a>
+      <a href="https://github.myshopify.com/"><li class="footer-nav-text">Shop</li></a>
+      <a href="https://github.com/blog"><li class="footer-nav-text">Blog</li></a>
+      <a href="https://github.com/about"><li class="footer-nav-text">About</li></a>
+    </ul>
+
+
+  </footer>
 
 
 

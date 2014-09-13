@@ -11,73 +11,82 @@
            <!--/////////////////////// Header /////////////////////////-->
   <header>
     <div  class="contain">
-
       <a href=""><span class="mega-octicon octicon-mark-github"></span></a>
       <input type="text" placeholder="Search GitHub" class="search-field"></input>
       <ul class="head-nav head-mid-nav">
-        <a href="https://github.com/explore"><li class="head-nav-text">Explore</li></a>
-        <a href="https://gist.github.com/"><li class="head-nav-text">Gist</li></a>
-        <a href="https://github.com/blog"><li class="head-nav-text">Blog</li></a>
-        <a href="https://help.github.com/"><li class="head-nav-text">Help</li></a> 
-      </ul>
-    
+        <li><a href="https://github.com/explore" class="head-nav-text">Explore</a></li>
+        <li><a href="https://gist.github.com/" class="head-nav-text">Gist</a></li>
+        <li><a href="https://github.com/blog" class="head-nav-text">Blog</a></li>
+        <li><a href="https://help.github.com/" class="head-nav-text">Help</a></li>
+      </ul>  
       <ul class="head-nav head-right-nav">
-        <li>
-          <a href="#" class="header-name"><img src="https://avatars.githubusercontent.com/u/5644576?v=2" class="nav-img">
-            <span class="">allanmonzon</span>
-          </a>
-        </li>
-        <a href=""><li class="head-nav-text"><span class="octicon octicon-plus octicon-nav"><span class="octicon octicon-triangle-down"></span></span></li></a>
-        <a href=""><li class="head-nav-text"><span class="octicon octicon-inbox octicon-nav"></span></li></a>
-        <a href=""><li class="head-nav-text"><span class="octicon octicon-gear octicon-nav"></span></li></a>
-        <a href=""><li class="head-nav-text"><span class="octicon octicon-sign-out octicon-nav"></span></li></a>
+        <li><a href="#"><img src="https://avatars.githubusercontent.com/u/5644576?v=2" class="nav-img"><span class="header-name">allanmonzon</span></a></li>
+        <li><a href="" class="head-nav-text"><span class="octicon octicon-plus octicon-nav"><span class="octicon octicon-triangle-down"></span></span></a></li>
+        <li><a href="" class="head-nav-text"><span class="octicon octicon-inbox octicon-nav"></span></a></li>
+        <li><a href="" class="head-nav-text"><span class="octicon octicon-gear octicon-nav"></span></a></li>
+        <li><a href="" class="head-nav-text"><span class="octicon octicon-sign-out octicon-nav"></span></a></li>
       </ul>
-
     </div>
   </header>
 
            <!--/////////////////////// Body /////////////////////////-->
 
+  <!-- Side Bar -->
   <div class="contain">
     <div class="left">
       <script type="text/template" id="template-user">
         <a href="<%= home_url %>"><img src="<%= image %>" class="user-img"></a>
-        <h1><%= name %></h1>
+        <h1 class="main-name"><%= name %></h1>
         <h2 class="user-name"><%= username %></h2>
         <ul class="user-info">
-          <li class="user-info-nav"><span class="octicon octicon-location"></span><%= location %></li>
-          <li class="user-info-nav"><span class="octicon octicon-mail"></span><%= email %></li>
-          <li class="user-info-nav"><span class="octicon octicon-clock"></span><%= joined %></li>
+          <li class="user-info-nav"><span class="octicon octicon-location oct-user"></span> <%= location %></li>
+          <li class="user-info-nav"><span class="octicon octicon-mail oct-user"></span> <a href="#" class="email"><%= email %></a></li>
+          <li class="user-info-nav"><span class="octicon octicon-clock oct-user"></span> <%= joined %></li>
         </ul>
         <div class="follow-section">
-          <span>Follower<%= followers %></span>
-          <span>Following<%= following %></span>
+          <a href=""><div class="cool"><span class="no"><%= followers %></span><p class="yes">Followers</p></div></a>
+          <a href=""><div class="cool"><span class="no"><%= following %></span><p class="yes">Following<p></div></a>
         </div>
-        <h2 class="organizations">Organizations</h2>
-       
+        <h2 class="organizations">Organizations</h2>  
       </script>
     </div>
 
-
+    <!-- Tabs -->
     <div class="right">
-      <div class="repo-nav"></div>
-      <script type="text/template" id="template-repos">
-    
+      <div class="repo-nav">
+        <div class="repo-tabs">
+          <ul class="repo-tabs-list">
+            <li><a href="" class="tab-text"><span class="octicon octicon-diff-added"></span> Contributions</li></a>
+            <li><a href="" class="but"><span class="octicon octicon-repo"></span> Repositories</li></a>
+            <li><a href="" class="tab-text"><span class="octicon octicon-rss"></span> Public activity</li></a>
+          </ul>
+          <a href=""><div class="edit-button"><span class="octicon octicon-pencil"></span> Edit profile</div></a>
+        </div>
 
-    <!--<ul class="repo-list">
-          <li class="repo-text"><%= repo_name %></li>
-        </ul>-->
-        
+        <input type="text" placeholder="Find a respository..." class="repo-search"></input>
+        <a href=""><div class="repo-search-btn">Search</div></a>
+        <ul class="repo-tab-links">
+          <li><a href="#" class="repo-links-text">All</a></li>
+          <li><a href="#" class="repo-links-text">Public</a></li>
+          <li><a href="#" class="repo-links-text">Private</a></li>
+          <li><a href="#" class="repo-links-text">Sources</a></li>
+          <li><a href="#" class="repo-links-text">Forks</a></li>
+          <li><a href="#" class="repo-links-text">Mirrors</a></li>
+        </ul>
+        <a href=""><div class="repo-new-btn"><span class="octicon octicon-repo"></span> New</div></a>
+      </div>
+
+      <!-- repos -->
+      <script type="text/template" id="template-repos">          
         <div class="repo-list">
           <a href="<%= repo_url %>"><h2 class="repo-name"><%= repo_name %></h2></a>
           <span class="repo-update"><%= repo_update %></span>
-          <ul class="cool">
+          <ul class="star-fork">
             <li><%= repo_language %></li>
-            <li><span class="octicon octicon-star"></span><%= stargazers %></li>
-            <li><span class="octicon octicon-git-branch"></span><%= forks %></li>
+            <li><a href="#" class="repo-octicon"><span class="octicon octicon-star repo-oct-size"></span> <%= stargazers %></a></li>
+            <li><a href="#" class="repo-octicon"><span class="octicon octicon-git-branch repo-oct-size"></span> <%= forks %></a></li>
           </ul>
-        </div>
-       
+        </div>      
       </script>
     </div>
   </div>
@@ -87,26 +96,21 @@
   <footer class="footer contain">
     <ul class="footer-nav-left">
       <li class="footer-nav-text">&copy; 2014 GitHub, Inc.</li>
-      <a href="https://help.github.com/articles/github-terms-of-service"><li class="footer-nav-text">Terms</li></a>
-      <a href="https://help.github.com/articles/github-privacy-policy"><li class="footer-nav-text">Privacy</li></a>
-      <a href="https://help.github.com/articles/github-security"><li class="footer-nav-text">Security</li></a>
-      <a href="https://github.com/contact"><li class="footer-nav-text">Contact</li></a>
+      <li><a href="https://help.github.com/articles/github-terms-of-service" class="footer-nav-text">Terms</a></li>
+      <li><a href="https://help.github.com/articles/github-privacy-policy" class="footer-nav-text">Privacy</a></li>
+      <li><a href="https://help.github.com/articles/github-security" class="footer-nav-text">Security</a></li>
+      <li><a href="https://github.com/contact" class="footer-nav-text">Contact</a></li>
     </ul>
     <a href="https://github.com/"><span class="octicon octicon-mark-github octicon-foot"></span></a>
     <ul class="footer-nav-right">
-      <a href="https://status.github.com/"><li class="footer-nav-text">Status</li></a>
-      <a href="https://developer.github.com/"><li class="footer-nav-text">API</li></a>
-      <a href="https://training.github.com/"><li class="footer-nav-text">Training</li></a>
-      <a href="https://github.myshopify.com/"><li class="footer-nav-text">Shop</li></a>
-      <a href="https://github.com/blog"><li class="footer-nav-text">Blog</li></a>
-      <a href="https://github.com/about"><li class="footer-nav-text">About</li></a>
+      <li><a href="https://status.github.com/" class="footer-nav-text">Status</a></li>
+      <li><a href="https://developer.github.com/" class="footer-nav-text">API</a></li>
+      <li><a href="https://training.github.com/" class="footer-nav-text">Training</a></li>
+      <li><a href="https://github.myshopify.com/" class="footer-nav-text">Shop</a></li>
+      <li><a href="https://github.com/blog" class="footer-nav-text">Blog</a></li>
+      <li><a href="https://github.com/about" class="footer-nav-text">About</a></li>
     </ul>
-
-
   </footer>
-
-
-
 
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>

@@ -1,5 +1,5 @@
 
- $.getJSON("https://api.github.com/users/allanmonzon").done(function(item) {
+$.getJSON("https://api.github.com/users/allanmonzon").done(function(item) {
  	var items = {
  		    image: item.avatar_url,
  		 home_url: item.html_url,
@@ -16,7 +16,8 @@
  	var templateFunction = _.template(templateString);
  	var renderTemplate = templateFunction(items);
  	$('.left').append(renderTemplate);
- });
+});
+
 
 
 var cool = $.getJSON("https://api.github.com/users/allanmonzon/repos").done(function(data) {	

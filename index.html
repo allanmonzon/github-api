@@ -11,7 +11,7 @@
            <!--/////////////////////// Header /////////////////////////-->
   <header>
     <div  class="contain">
-      <a href=""><span class="mega-octicon octicon-mark-github"></span></a>
+      <a href="https://github.com/"><span class="mega-octicon octicon-mark-github"></span></a>
       <input type="text" placeholder="Search GitHub" class="search-field"></input>
       <ul class="head-nav head-mid-nav">
         <li><a href="https://github.com/explore" class="head-nav-text">Explore</a></li>
@@ -33,7 +33,7 @@
 
   <!-- Side Bar -->
   <div class="contain">
-    <div class="left">
+    <div class="user">
       <script type="text/template" id="template-user">
         <a href="<%= home_url %>"><img src="<%= image %>" class="user-img"></a>
         <h1 class="main-name"><%= name %></h1>
@@ -41,37 +41,55 @@
         <ul class="user-info">
           <li class="user-info-nav"><span class="octicon octicon-location oct-user"></span> <%= location %></li>
           <li class="user-info-nav"><span class="octicon octicon-mail oct-user"></span> <a href="#" class="email"><%= email %></a></li>
-          <li class="user-info-nav"><span class="octicon octicon-clock oct-user"></span> <%= joined %></li>
+          <li class="user-info-nav"><span class="octicon octicon-clock oct-user"></span>Joined on <%= joined %></li>
         </ul>
         <div class="follow-section">
-          <a href=""><div class="cool"><span class="no"><%= followers %></span><p class="yes">Followers</p></div></a>
-          <a href=""><div class="cool"><span class="no"><%= following %></span><p class="yes">Following<p></div></a>
+            <div class="follow-contain">
+             <a href="https://github.com/allanmonzon/followers" class="follow-text">
+                <span class="follow-number"><%= followers %></span>
+                <p>Followers</p>
+              </a>
+            </div>
+
+           <div class="follow-contain">
+             <a href="https://github.com/stars" class="follow-text">
+                <span class="follow-number"><%= starred %></span>
+                <p>Starred</p>
+              </a>
+            </div>
+
+            <div class="follow-contain">
+             <a href="https://github.com/allanmonzon/following" class="follow-text">
+                <span class="follow-number"><%= following %></span>
+                <p>Following<p>
+              </a>
+            </div>
         </div>
-        <h2 class="organizations">Organizations</h2>  
+        <h2 class="organizations">Organizations</h2> 
+        <a href="https://github.com/TIY-GVL-FEE-2014-Aug"><img src="https://avatars.githubusercontent.com/u/8293064?v=2" class="org-img"></a>
       </script>
     </div>
 
     <!-- Tabs -->
-    <div class="right">
+    <div class="main-repos">
       <div class="repo-nav">
         <div class="repo-tabs">
           <ul class="repo-tabs-list">
             <li><a href="" class="tab-text"><span class="octicon octicon-diff-added"></span> Contributions</li></a>
-            <li><a href="" class="but"><span class="octicon octicon-repo"></span> Repositories</li></a>
+            <li><a href="" class="respo-tab"><span class="octicon octicon-repo"></span> Repositories</li></a>
             <li><a href="" class="tab-text"><span class="octicon octicon-rss"></span> Public activity</li></a>
           </ul>
           <a href=""><div class="edit-button"><span class="octicon octicon-pencil"></span> Edit profile</div></a>
         </div>
-
         <input type="text" placeholder="Find a respository..." class="repo-search"></input>
         <a href=""><div class="repo-search-btn">Search</div></a>
         <ul class="repo-tab-links">
-          <li><a href="#" class="repo-links-text">All</a></li>
-          <li><a href="#" class="repo-links-text">Public</a></li>
-          <li><a href="#" class="repo-links-text">Private</a></li>
-          <li><a href="#" class="repo-links-text">Sources</a></li>
-          <li><a href="#" class="repo-links-text">Forks</a></li>
-          <li><a href="#" class="repo-links-text">Mirrors</a></li>
+          <li><a href="#">All</a></li>
+          <li><a href="#">Public</a></li>
+          <li><a href="#">Private</a></li>
+          <li><a href="#">Sources</a></li>
+          <li><a href="#">Forks</a></li>
+          <li><a href="#">Mirrors</a></li>
         </ul>
         <a href=""><div class="repo-new-btn"><span class="octicon octicon-repo"></span> New</div></a>
       </div>
@@ -80,11 +98,11 @@
       <script type="text/template" id="template-repos">          
         <div class="repo-list">
           <a href="<%= repo_url %>"><h2 class="repo-name"><%= repo_name %></h2></a>
-          <span class="repo-update"><%= repo_update %></span>
+          <span class="repo-update">Updated <%= repo_update %></span>
           <ul class="star-fork">
             <li><%= repo_language %></li>
-            <li><a href="#" class="repo-octicon"><span class="octicon octicon-star repo-oct-size"></span> <%= stargazers %></a></li>
-            <li><a href="#" class="repo-octicon"><span class="octicon octicon-git-branch repo-oct-size"></span> <%= forks %></a></li>
+            <li><a href="#"><span class="octicon octicon-star"></span> <%= stargazers %></a></li>
+            <li><a href="#"><span class="octicon octicon-git-branch"></span> <%= forks %></a></li>
           </ul>
         </div>      
       </script>
@@ -112,6 +130,7 @@
     </ul>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.2/moment.min.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
   <script src="data.js"></script>

@@ -24,10 +24,10 @@ header {
   border-bottom: 1px solid #e5e5e5; }
 
 .octicon-mark-github {
+  vertical-align: middle;
   margin: 0 1px 1px -1px;
-  color: #333;
   font-size: 28px;
-  vertical-align: middle; }
+  color: #333; }
   .octicon-mark-github:hover {
     color: #4183c4; }
 
@@ -44,12 +44,11 @@ header {
   display: inline-block;
   font-family: Helvetica;
   font-size: 13px;
-  font-weight: bold;
-  color: #333; }
+  font-weight: bold; }
 
 .head-nav-text {
-  color: #333;
-  margin-left: 12px; }
+  margin-left: 12px;
+  color: #333; }
   .head-nav-text:hover {
     color: #4183c4; }
 
@@ -60,16 +59,16 @@ header {
   margin-left: 100px; }
 
 .nav-img {
+  vertical-align: middle;
   width: 20px;
   height: 20px;
   margin: -1px 1px 0 -1px;
-  vertical-align: middle;
   border-radius: 3px; }
 
 .header-name {
   display: inline-block;
-  margin-left: 4px;
   margin-right: 10px;
+  margin-left: 4px;
   color: #333; }
   .header-name:hover {
     color: #4183c4; }
@@ -83,26 +82,27 @@ header {
   margin-left: 2px;
   font-size: 11px; }
 
-.left {
+.user {
   vertical-align: top;
   display: inline-block;
   width: 230px;
   margin-right: 18px; }
 
 .user-img {
-  height: 230px;
   width: 230px;
+  height: 230px;
   border-radius: 5px; }
 
 .main-name {
   margin-top: 2px;
-  margin-bottom: -16px; }
+  margin-bottom: -16px;
+  color: #333; }
 
 .user-name {
   padding-bottom: 17px;
   margin-bottom: 18px;
-  font-weight: lighter;
   color: #666674;
+  font-weight: lighter;
   border-bottom: 1px solid #e5e5e5; }
 
 .user-info {
@@ -117,6 +117,8 @@ header {
 
 .email {
   color: #4183c4; }
+  .email:hover {
+    text-decoration: underline; }
 
 .oct-user {
   margin-right: 8px;
@@ -128,31 +130,37 @@ header {
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5; }
 
-.cool {
+.follow-contain {
   display: inline-block;
-  margin-right: 40px;
+  margin-right: 17px;
   margin-left: 14px; }
 
-.no {
-  margin-left: 18px;
+.follow-text {
+  font-size: 11px;
+  color: #888; }
+  .follow-text:hover {
+    color: #4183c4; }
+
+.follow-number {
+  display: block;
+  margin-left: 14px;
+  margin-bottom: -11px;
   font-size: 28px;
   font-weight: bold;
   color: #4183c4; }
 
-.yes {
-  margin-top: 0;
-  font-size: 11px;
-  color: #888; }
-
 .organizations {
   margin-top: 24px;
-  font-size: 16px; }
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #333; }
 
 .org-img {
-  width: 44px;
-  height: 44px; }
+  width: 42px;
+  height: 42px;
+  border-radius: 3px; }
 
-.right {
+.main-repos {
   display: inline-block;
   width: 729px; }
 
@@ -177,7 +185,7 @@ header {
   margin-right: 13px;
   color: #888; }
 
-.but {
+.respo-tab {
   padding: 10px 12px 8px 12px;
   margin-right: 12px;
   color: #333;
@@ -187,19 +195,21 @@ header {
 
 .edit-button {
   float: right;
-  padding-top: 3px;
   width: 105px;
   height: 21px;
+  padding-top: 3px;
   margin-top: 3px;
   font-size: 13px;
   font-weight: bold;
   color: #333;
   text-align: center;
-  background: #fafafa;
-  border: 1px solid #e5e5e5;
+  background: #f5f5f5;
+  border: 1px solid #ccc;
   border-radius: 4px; }
   .edit-button:hover {
-    background: black; }
+    background: #e4e2e4; }
+  .edit-button:active {
+    -webkit-box-shadow: inset -0 1px 6px 0 #a3a0a3; }
 
 .repo-search {
   width: 247px;
@@ -221,37 +231,48 @@ header {
   font-weight: bold;
   color: #333;
   text-align: center;
-  background: #fafafa;
+  background: #f5f5f5;
   border: 1px solid #ccc;
   border-radius: 3px; }
+  .repo-search-btn:hover {
+    background: #e4e2e4; }
+  .repo-search-btn:active {
+    -webkit-box-shadow: inset 0px 1px 5px 0 #a3a0a3; }
 
 .repo-tab-links {
   display: inline-block;
   margin-left: -9px;
   font-size: 14px; }
-
-.repo-links-text {
-  margin-right: 6px;
-  color: #4183c4; }
-  .repo-links-text:hover {
-    text-decoration: underline;
-    color: #333; }
+  .repo-tab-links a {
+    margin-right: 6px;
+    color: #4183c4; }
+    .repo-tab-links a:hover {
+      color: #333;
+      text-decoration: underline; }
 
 .repo-new-btn {
   display: inline-block;
   vertical-align: middle;
+  padding-top: 8px;
   width: 67px;
   height: 25px;
-  padding-top: 8px;
-  margin-top: -4px;
-  margin-left: 6px;
+  margin-left: 1px;
   font-size: 13px;
   font-weight: bold;
-  color: #fff;
+  color: #333;
   text-align: center;
-  background: #87d96a;
+  background: green;
   border: 1px solid #ccc;
-  border-radius: 3px; }
+  border-radius: 3px;
+  margin-top: -4px;
+  margin-left: 6px;
+  color: #fff;
+  background: linear-gradient(#88db6b, #62b246);
+  border-color: #5ca941; }
+  .repo-new-btn:hover {
+    background: linear-gradient(#77db5a, #50a024); }
+  .repo-new-btn:active {
+    -webkit-box-shadow: inset 0px 8px 14px -4px #1e751e; }
 
 .repo-list {
   padding-bottom: 33px;
@@ -259,34 +280,34 @@ header {
   border-bottom: 1px solid #e5e5e5; }
 
 .repo-name {
-  color: #4183c4;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  color: #4183c4; }
   .repo-name:hover {
     text-decoration: underline; }
 
 .repo-update {
-  font-size: 12px;
+  font-size: 13px;
   color: #888; }
 
 .star-fork {
   float: right;
   margin-top: -25px;
-  color: #888;
   font-size: 12px;
-  font-weight: bold; }
-
-.repo-octicon {
-  color: #888;
-  margin-left: 8px; }
-
-.repo-oct-size {
-  font-size: 14px; }
+  font-weight: bold;
+  color: #888; }
+  .star-fork a {
+    margin-left: 8px;
+    color: #888; }
+    .star-fork a:hover {
+      color: #4183c4; }
+    .star-fork a span {
+      font-size: 14px; }
 
 .footer {
   padding-top: 28px;
   margin-bottom: 30px;
-  border-top: 1px solid #e5e5e5;
-  font-size: 12px; }
+  font-size: 12px;
+  border-top: 1px solid #e5e5e5; }
 
 .footer-nav-text {
   margin-right: 10px;
@@ -304,9 +325,9 @@ header {
   text-decoration: none; }
 
 .octicon-foot {
+  margin-left: 74px;
   font-size: 24px;
-  color: #ccc;
-  margin-left: 74px; }
+  color: #ccc; }
   .octicon-foot:hover {
     color: #bbb; }
 

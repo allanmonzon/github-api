@@ -1,3 +1,32 @@
+//****************** FONT-COLORS *****************//
+$primary-color: #888;
+$secondary-color: #ccc;
+$bg-color: #f5f5f5;
+$dark-color: #333; 
+$link-color: #4183c4;
+$border-color: #e5e5e5;
+
+//****************** MIXINS *****************//
+@mixin border ($color){
+	border-bottom: 1px solid $color;
+}
+
+@mixin md-btn($bg-color) {
+	display: inline-block;
+	vertical-align: middle;
+	padding-top: 8px;
+	width: 67px;
+	height: 25px;
+	margin-left: 1px;
+	font-size: 13px;
+	font-weight: bold;
+	color: $dark-color;
+	text-align: center;
+	background: $bg-color;
+	border: 1px solid $secondary-color;
+	border-radius: 3px;
+}
+
 body {
 	margin: 0;
 	font-family: Helvetica, sans-serif;
@@ -21,24 +50,26 @@ li {
 	margin: 0 auto;
 }
 
-//////// Header
+//****************** HEADER *****************//
 
 header {
 	max-width: 100%;
 	height: 48px;
 	margin-bottom: 20px;
-	background: #f5f5f5;
-	border-bottom: 1px solid #e5e5e5;
+	background: $bg-color;							
+	@include border($border-color);								
 }
 
-.octicon-mark-github {
-	margin: 0 1px 1px -1px;
-	color: #333;
-	font-size: 28px;
-	vertical-align: middle;
+//Logo and input
 
+.octicon-mark-github {
+	vertical-align: middle;
+	margin: 0 1px 1px -1px;
+	font-size: 28px;
+	color: $dark-color;
+	
 	&:hover {
-		color: #4183c4;
+		color: $link-color;
 	}
 }
 
@@ -48,51 +79,56 @@ header {
 	padding-left: 9px;
 	margin-top: 10px;
 	margin-left: 5px;
-	border: 1px solid #ccc;
+	border: 1px solid $secondary-color;											
 	border-radius: 3px;
 }
+
+//*** nav-styles ***//
 
 .head-nav {
 	display: inline-block;
 	font-family: Helvetica;
 	font-size: 13px;
 	font-weight: bold;
-	color: #333;
 }
 
 .head-nav-text{
-	color: #333;
 	margin-left: 12px;
-
+	color: $dark-color;
+	
 	&:hover {
-		color: #4183c4;
+		color: $link-color;
 	}
 }
+
+//middle-nav
 
 .head-mid-nav {
 	margin-left: -37px;
 }
+
+//right-nav
 
 .head-right-nav {
 	margin-left: 100px;
 }
 
 .nav-img {
+	vertical-align: middle;
 	width: 20px;
 	height: 20px;
 	margin: -1px 1px 0 -1px;
-	vertical-align: middle;
 	border-radius: 3px;
 }
 
 .header-name {
 	display: inline-block;
-	margin-left: 4px;
 	margin-right: 10px;
-	color: #333;
+	margin-left: 4px;
+	color: $dark-color;
 
 	&:hover {
-		color: #4183c4;
+		color: $link-color;
 	}
 }
 
@@ -108,33 +144,38 @@ header {
 }
 
 
-///////////// User
+//****************** USER *****************//
 
-.left {
+.user {
 	vertical-align: top;
 	display: inline-block;
 	width: 230px;
 	margin-right: 18px;
 }
 
+//user img-name
+
 .user-img {
-	height: 230px;
-	width: 230px;
+	width: 230px;	
+	height: 230px;			
 	border-radius: 5px;
 }
 
 .main-name {
 	margin-top: 2px;
 	margin-bottom: -16px;
+	color: $dark-color;
 }
 
 .user-name {
 	padding-bottom: 17px;
 	margin-bottom: 18px;
-	font-weight: lighter;
 	color: #666674;
-	border-bottom: 1px solid #e5e5e5;
+	font-weight: lighter;
+	@include border($border-color);	 								
 }
+
+//user-info
 
 .user-info {
 	padding-bottom: 10px;
@@ -145,57 +186,73 @@ header {
 	display: inline-block;
 	margin-bottom: 7px;
 	font-size: 14px;
-	color: #333;
+	color: $dark-color;
 }
 
 .email {
-	color: #4183c4;
+	color: $link-color;
+
+	&:hover {
+		text-decoration: underline;
+	}
 }
 
 .oct-user {
 	margin-right: 8px;
-	color: #ccc;
+	color: $secondary-color;										
 }
 
-.follow-section {
+//follow-section
+
+.follow-section {					
 	padding: 13px 0 2px 0;
 	margin-top: -11px;
-	border-top: 1px solid #e5e5e5;
-	border-bottom: 1px solid #e5e5e5;
+	border-top: 1px solid $border-color;    					
+	@include border($border-color);					
 }
 
-.cool {
+.follow-contain {
 	display: inline-block;
-	margin-right: 40px;
+	margin-right: 17px;
 	margin-left: 14px;
 }
 
-.no {
-	margin-left: 18px;
-	font-size: 28px;
-	font-weight: bold;
-	color: #4183c4;
+.follow-text {
+	font-size: 11px;
+	color: $primary-color;
+
+	&:hover {
+		color: $link-color;
+	}	
 }
 
-.yes {
-	margin-top: 0;
-	font-size: 11px;
-	color: #888;
+.follow-number {
+	display: block;
+	margin-left: 14px;
+	margin-bottom: -11px;
+	font-size: 28px;
+	font-weight: bold;
+	color: $link-color;
 }
+
+//organizations
 
 .organizations {
 	margin-top: 24px;
-	font-size: 16px;	
+	margin-bottom: 15px;
+	font-size: 16px;     
+	color: $dark-color;	
 }
 
 .org-img {
-	width: 44px;
-	height: 44px;
+	width: 42px;
+	height: 42px;
+	border-radius: 3px;		 
 }
 
-/////////// Repos
+//****************** REPO TABS *****************//
 
-.right {
+.main-repos {
 	display: inline-block;
 	width: 729px;
 }
@@ -203,14 +260,16 @@ header {
 .repo-nav {
 	padding-bottom: 6px;
 	margin-bottom: 30px;
-	border-bottom: 1px solid #e5e5e5;
+	@include border($border-color);									
 }
+
+//first-line
 
 .repo-tabs {
 	padding-bottom: -15px;
 	margin-top: -3px;
 	margin-bottom: 5px;
-	border-bottom: 1px solid #e5e5e5;
+	@include border($border-color);									
 }
 
 
@@ -223,110 +282,113 @@ header {
 
 .tab-text {
 	margin-right: 13px;
-	color: #888;
+	color: $primary-color;												
 }
 
-.but {
+.respo-tab {
 	padding: 10px 12px 8px 12px;
 	margin-right: 12px;
-	color: #333;
-	border: 1px solid #e5e5e5;
-	border-bottom: 1px solid #fff;
+	color: $dark-color;
+	border: 1px solid $border-color;									
+	@include border(#fff);	
 	border-radius: 3px;
 }
 
-	
-
-.edit-button {
-		
+.edit-button {	
 	float: right;
-	padding-top: 3px;	
 	width: 105px;
 	height: 21px;
+	padding-top: 3px;	
 	margin-top: 3px;
 	font-size: 13px;
 	font-weight: bold;
-	color: #333;
-	text-align: center;
-	background: #fafafa;
-	border: 1px solid #e5e5e5;
+	color: $dark-color;
+	text-align: center;										
+	background: $bg-color;
+	border: 1px solid $secondary-color;								  
 	border-radius: 4px;	
 
 	&:hover {
-			background: black;
+			background: #e4e2e4;
+	}
+
+	&:active {
+		-webkit-box-shadow: inset -0 1px 6px 0 rgba(163,160,163,1);
 	}
 }
 
 
+
+//second-line
 
 .repo-search {
 	width: 247px;
 	height: 30px;
 	padding-left: 9px;
 	margin-top: 10px;
-	font-size: 12px;
-	border: 1px solid #ccc;
+	font-size: 12px;												
+	border: 1px solid $secondary-color;
 	border-radius: 3px;
 }
 
-.repo-search-btn {
-	display: inline-block;
-	vertical-align: middle;
-	padding-top: 8px;
-	width: 67px;
-	height: 25px;
-	margin-left: 1px;
-	font-size: 13px;
-	font-weight: bold;
-	color: #333;
-	text-align: center;
-	background: #fafafa;
-	border: 1px solid #ccc;
-	border-radius: 3px;
+.repo-search-btn {														
+	@include md-btn($bg-color);
+
+	&:hover{
+		background: #e4e2e4;
+	}
+
+	&:active {
+		-webkit-box-shadow: inset 0px 1px 5px 0 rgba(163,160,163,1);
+	}
 }
 
 .repo-tab-links {
 	display: inline-block;
 	margin-left: -9px;
 	font-size: 14px;
-}
 
-.repo-links-text {
+	a {
 		margin-right: 6px;
-		color: #4183c4;
-	
+		color: $link-color;
+		
 		&:hover {
+			color: $dark-color;
 			text-decoration: underline;
-			color: #333;
 		}
+	}
 }
 
 .repo-new-btn {
-	display: inline-block;
-	vertical-align: middle;
-	width: 67px;
-	height: 25px;
-	padding-top: 8px;
-	margin-top: -4px;
+	@include md-btn(green);
+	margin-top: -4px;													
 	margin-left: 6px;
-	font-size: 13px;
-	font-weight: bold;
 	color: #fff;
-	text-align: center;
-	background: #87d96a;
-	border: 1px solid #ccc;
-	border-radius: 3px;
+	background: linear-gradient(#88db6b, #62b246);
+	border-color: #5ca941;
+
+	&:hover {
+		background: linear-gradient(#77db5a, #50a024);
+	}
+
+	&:active {
+		-webkit-box-shadow: inset 0px 8px 14px -4px rgba(30,117,30,1);
+	}
 }
+
+//****************** REPOS *****************//
+
+//left-side
 
 .repo-list {
 	padding-bottom: 33px;
 	margin-bottom: 30px;	
-	border-bottom: 1px solid #e5e5e5;
+	@include border($border-color);		
 }
 
-.repo-name {
-	color: #4183c4;
+.repo-name {																	
 	margin-bottom: 10px;
+	color: $link-color;
 
 	&:hover {
 		text-decoration: underline;
@@ -334,44 +396,54 @@ header {
 }
 
 .repo-update {
- 	font-size: 12px;
- 	color: #888; 
+ 	font-size: 13px;
+ 	color: $primary-color; 															
 }
+
+//right-side
 
 .star-fork {
 	float: right;
 	margin-top: -25px;
-	color: #888;
 	font-size: 12px;
 	font-weight: bold;
-}
+	color: $primary-color;
 
-.repo-octicon {
-	color: #888;
-	margin-left: 8px;
-}
+	a {
+		margin-left: 8px;
+		color: $primary-color;
 
-.repo-oct-size {
-	font-size: 14px
-}
+		&:hover {
+			color: $link-color;
+		}
 
-///////////// Footer
+		span {
+			font-size: 14px;
+		}
+	}
+
+}
+//****************** FOOTER *****************//
 
 .footer {
 	padding-top: 28px;
 	margin-bottom: 30px;
-	border-top: 1px solid #e5e5e5;
-	font-size: 12px;
+	font-size: 12px;									
+	border-top: 1px solid $border-color;
 }
+
+//*** nav-styles ***//
 
 .footer-nav-text {
 	margin-right: 10px;
-	color: #4183c4;
+	color: $link-color;
 
 	&:hover {
 		text-decoration: underline;
 	}
 }
+
+//left-nav
 
 .footer-nav-left {
 	display: inline-block;
@@ -379,20 +451,24 @@ header {
 	margin-right: 74px;
 }
 
+//logo
+
 .footer-nav-left > :first-child {
 	color: #777;
-	text-decoration: none;
+	text-decoration: none;									
 }
 
 .octicon-foot {
-	font-size: 24px;
-	color: #ccc;
 	margin-left: 74px;
+	font-size: 24px;
+	color: $secondary-color;											
 
 	&:hover {
-		color: #bbb;
+		color: #bbb;										
 	}
 }
+
+//right-nav
 
 .footer-nav-right {
 	display: inline-block;
